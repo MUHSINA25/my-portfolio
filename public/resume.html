@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Muhsina CT - Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+        --accent: #6366f1;
+        --accent2: #a855f7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #1e293b;
+        background: #f4f4f8;
+      }
+      .page {
+        max-width: 860px;
+        margin: 24px auto;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        overflow: hidden;
+      }
+      .header {
+        background: linear-gradient(120deg, var(--accent), var(--accent2));
+        color: #fff;
+        padding: 40px 48px;
+      }
+      .header h1 { margin: 0; font-size: 32px; }
+      .header p.roles { margin: 8px 0 0; font-size: 15px; opacity: 0.95; }
+      .header .contact { margin-top: 18px; font-size: 13px; display: flex; flex-wrap: wrap; gap: 16px; opacity: 0.95; }
+      .content { padding: 32px 48px 48px; }
+      h2.section {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--accent);
+        border-bottom: 2px solid #eef0ff;
+        padding-bottom: 8px;
+        margin-top: 32px;
+      }
+      .item { margin-top: 16px; }
+      .item .row { display: flex; justify-content: space-between; flex-wrap: wrap; }
+      .item h3 { margin: 0; font-size: 16px; }
+      .item .company { color: var(--accent2); font-weight: 600; font-size: 13px; }
+      .item .duration { font-size: 12px; color: #64748b; white-space: nowrap; }
+      ul { margin: 8px 0 0; padding-left: 18px; font-size: 13px; color: #334155; }
+      li { margin-bottom: 4px; }
+      .tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+      .tag { background: #eef0ff; color: var(--accent); font-size: 11px; padding: 3px 10px; border-radius: 999px; }
+      .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+      .skill-cat { margin-top: 14px; font-size: 13px; }
+      .skill-cat b { display: block; margin-bottom: 4px; color: #0f172a; }
+      @media print {
+        body { background: #fff; }
+        .page { box-shadow: none; margin: 0; border-radius: 0; }
+        .print-btn { display: none; }
+      }
+      .print-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 999px;
+        font-size: 13px;
+        cursor: pointer;
+        box-shadow: 0 6px 20px rgba(99,102,241,0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+    <div class="page">
+      <div class="header">
+        <h1>Muhsina CT</h1>
+        <p class="roles">Data Analyst &nbsp;|&nbsp; Data Scientist &nbsp;|&nbsp; AI &amp; Data Science Trainer</p>
+        <div class="contact">
+          <span>Email: muhsinact25@gmail.com</span>
+          <span>LinkedIn: linkedin.com/in/muhsinact</span>
+          <span>GitHub: github.com/MUHSINA25</span>
+          <span>Location: Kerala, India</span>
+        </div>
+      </div>
+
+      <div class="content">
+        <h2 class="section">Summary</h2>
+        <p style="font-size: 13px; line-height: 1.6; color:#334155;">
+          Data-driven professional blending a Physics research background with an ongoing MBA in Data Science.
+          Experienced as an AI &amp; Data Science Trainer and Data Science Intern, skilled in Python, SQL, Machine Learning,
+          and Business Intelligence tools such as Power BI and Tableau. Passionate about analytics, teaching, and mentoring.
+        </p>
+
+        <h2 class="section">Experience</h2>
+
+        <div class="item">
+          <div class="row">
+            <h3>AI &amp; Data Science Trainer</h3>
+            <span class="duration">July 2025 – Present</span>
+          </div>
+          <div class="company">IQJITA Innovative LLP</div>
+          <ul>
+            <li>Train and mentor students in Python, SQL, Power BI, and Machine Learning fundamentals.</li>
+            <li>Design hands-on curriculum and real-world data analytics assignments.</li>
+            <li>Guide learners through end-to-end data science project workflows.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Power BI</span>
+            <span class="tag">Machine Learning</span><span class="tag">Mentoring</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="row">
+            <h3>Data Science Intern</h3>
+            <span class="duration">July 2024 – January 2025</span>
+          </div>
+          <div class="company">Evoastra Ventures Pvt Ltd</div>
+          <ul>
+            <li>Worked on Machine Learning and Deep Learning models for real-world business problems.</li>
+            <li>Built interactive Power BI dashboards to communicate insights to stakeholders.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Machine Learning</span><span class="tag">Deep Learning</span><span class="tag">Power BI</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="row">
+            <h3>Data Science Intern</h3>
+            <span class="duration">November 2024 – December 2024</span>
+          </div>
+          <div class="company">Prodigy InfoTech</div>
+          <ul>
+            <li>Completed applied data science tasks covering EDA, data cleaning, and visualization.</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">EDA</span><span class="tag">Data Cleaning</span></div>
+        </div>
+
+        <h2 class="section">Education</h2>
+        <div class="item">
+          <div class="row"><h3>MBA in Data Science</h3><span class="duration">Ongoing</span></div>
+          <div class="company">Amity University</div>
+        </div>
+        <div class="item">
+          <div class="row"><h3>MSc Physics</h3><span class="duration">Completed</span></div>
+          <div class="company">University of Calicut</div>
+        </div>
+        <div class="item">
+          <div class="row"><h3>BSc Physics</h3><span class="duration">Completed</span></div>
+          <div class="company">University of Calicut</div>
+        </div>
+
+        <h2 class="section">Skills</h2>
+        <div class="grid2">
+          <div class="skill-cat"><b>Programming</b>Python, SQL, MySQL</div>
+          <div class="skill-cat"><b>Libraries</b>Pandas, NumPy, Matplotlib, Seaborn</div>
+          <div class="skill-cat"><b>Machine Learning</b>Scikit-learn, Deep Learning, Predictive Modeling, Feature Engineering</div>
+          <div class="skill-cat"><b>Visualization &amp; BI</b>Power BI, Tableau, Excel</div>
+          <div class="skill-cat"><b>Other</b>Git, GitHub, Statistics, Data Cleaning, EDA, Leadership, Communication</div>
+        </div>
+
+        <h2 class="section">Certifications</h2>
+        <ul>
+          <li>Data Science &amp; Machine Learning — Illinois Institute of Technology</li>
+          <li>Data Science &amp; Machine Learning — Entri Elevate</li>
+          <li>Career Essentials in Generative AI — Microsoft &amp; LinkedIn</li>
+          <li>Data Science Foundation</li>
+          <li>Artificial Intelligence Foundation</li>
+        </ul>
+
+        <h2 class="section">Featured Projects</h2>
+        <ul>
+          <li><b>Delayed Payment Detector</b> — ML pipeline predicting delayed invoice payments using SMOTE &amp; GridSearchCV.</li>
+          <li><b>TATA Sales Analysis</b> — Power BI dashboard analyzing revenue, customers, and global demand.</li>
+          <li><b>Health Insurance Fraud Detection</b> — Deployed Streamlit ML app detecting fraudulent claims.</li>
+          <li><b>Credit Risk / Loan Approval Classification</b> — ML model predicting loan default probability.</li>
+          <li><b>COVID-19 Global Dashboard</b> — Multi-page Power BI dashboard analyzing pandemic trends.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
