@@ -7,64 +7,33 @@ export default function Experience() {
   return (
     <section id="experience" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="Experience"
-          title="Professional Journey"
-          subtitle="Hands-on experience training future data professionals and delivering real-world machine learning and analytics projects."
-        />
+        <SectionHeading eyebrow="Experience" title="A career built on execution" subtitle="Hands-on experience across AI training, analytics delivery, and real-world product thinking." />
 
-        <div className="relative">
-          {/* vertical line */}
-          <div className="absolute left-[22px] top-2 bottom-2 w-px bg-gradient-to-b from-indigo-500 via-fuchsia-500 to-transparent sm:left-1/2 sm:-translate-x-1/2" />
-
-          <div className="space-y-12">
-            {experience.map((exp, idx) => {
-              const isLeft = idx % 2 === 0;
-              return (
-                <div key={exp.role + exp.company} className="relative sm:grid sm:grid-cols-2 sm:gap-10">
-                  {/* dot */}
-                  <div className="absolute left-[22px] top-1 z-10 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-fuchsia-500 text-white shadow-lg shadow-indigo-500/30 sm:left-1/2">
-                    <FiBriefcase size={16} />
-                  </div>
-
-                  <motion.div
-                    initial={{ opacity: 0, x: isLeft ? -40 : 40 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.6 }}
-                    className={`ml-16 rounded-3xl border border-slate-200/70 bg-white/70 p-6 shadow-sm backdrop-blur transition hover:shadow-xl hover:shadow-indigo-500/10 sm:ml-0 dark:border-white/10 dark:bg-white/[0.03] ${
-                      isLeft ? "sm:col-start-1 sm:text-right" : "sm:col-start-2"
-                    }`}
-                  >
-                    <span className="inline-block rounded-full bg-indigo-500/10 px-3 py-1 text-xs font-semibold text-indigo-600 dark:text-indigo-400">
-                      {exp.duration}
-                    </span>
-                    <h3 className="mt-3 text-xl font-bold text-slate-900 dark:text-white">{exp.role}</h3>
-                    <p className="mt-1 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400">
-                      {exp.company}
-                    </p>
-                    <ul className={`mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 ${isLeft ? "sm:list-inside" : ""}`}>
-                      {exp.points.map((p) => (
-                        <li key={p} className="leading-relaxed">
-                          {p}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className={`mt-4 flex flex-wrap gap-2 ${isLeft ? "sm:justify-end" : ""}`}>
-                      {exp.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600 dark:bg-white/10 dark:text-slate-300"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </motion.div>
-                </div>
-              );
-            })}
-          </div>
+        <div className="relative ml-4 space-y-8 border-l border-white/10 pl-8">
+          {experience.map((exp, idx) => (
+            <motion.div
+              key={exp.role + exp.company}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.5, delay: idx * 0.06 }}
+              className="relative"
+            >
+              <span className="absolute -left-[2.05rem] top-1 flex h-8 w-8 items-center justify-center rounded-full border border-[#3b82f6]/30 bg-[#11131a] text-[#3b82f6]">
+                <FiBriefcase size={14} />
+              </span>
+              <div className="glass-panel rounded-[1.5rem] p-6">
+                <p className="text-sm font-medium uppercase tracking-[0.25em] text-slate-400">{exp.duration}</p>
+                <h3 className="mt-3 text-xl font-semibold text-white">{exp.role}</h3>
+                <p className="mt-1 text-sm font-medium text-[#93c5fd]">{exp.company}</p>
+                <ul className="mt-4 space-y-2 text-sm leading-7 text-slate-400">
+                  {exp.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
